@@ -1,0 +1,21 @@
+<ng-container>
+  <div class="section user-profile-wrap">
+    <div class="user-cover" *ngIf="user" [ngStyle]="{
+      'background': 'url(' + user?.cover + ') no-repeat center/cover ', 
+      'height': '400px'}">
+    </div>
+    <div class="user-controls">
+      <nav class="tab-nav">
+        <a (click)="activetab = 'selfies'" [ngClass]="{'active': activetab == 'selfies'}">selfies</a>
+        <a (click)="activetab = 'favourites'" [ngClass]="{'active': activetab == 'favourites'}">favourites</a>
+        <a (click)="activetab = 'followers'" [ngClass]="{'active': activetab == 'followers'}">followers</a>
+        <a (click)="activetab = 'followings'" [ngClass]="{'active': activetab == 'followings'}">followings</a>
+      </nav>
+    </div>
+    <div class="user-tab-content">
+      <app-user-profile-images *ngIf="activetab == 'selfies'"></app-user-profile-images>
+      <app-user-profile-favourites *ngIf="activetab == 'favourites'"></app-user-profile-favourites>
+      <app-user-profile-follows *ngIf="activetab == 'followers' || activetab == 'followings'"></app-user-profile-follows>
+    </div>
+  </div>
+</ng-container>
