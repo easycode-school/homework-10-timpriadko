@@ -15,5 +15,5 @@ export class AuthGlobalService {
   }
   public isTokenExpired() {
     return this.jwtHelper.isTokenExpired(this.getToken);
-  } 
+  }
 }

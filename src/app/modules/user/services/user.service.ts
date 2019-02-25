@@ -15,4 +15,9 @@ export class UserService {
   public getUserInfo(id: string): Observable<User> {
     return this.http.get<User>(`${this.apiUrl}/public/users/get-info/${id}`);
   }
+
+  // Get user profile images from the server
+  public getUserImages(id: string) {
+    return this.http.get(`${this.apiUrl}/public/users/my-images/${id}`);
+  }
 }
