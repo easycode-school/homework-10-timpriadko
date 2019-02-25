@@ -1,0 +1,39 @@
+/* Tabs */
+
+.tab-nav {}
+
+.tab {
+    padding: 12px 15px;
+    cursor: pointer;
+}
+
+.active {
+    color: #7303c0;
+    background-color: hsl(321, 19%, 86%);
+}
+
+
+/* Avatar */
+
+.user-controls {}
+
+.user-avatar {
+    width: 138px;
+    height: 138px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.user-avatar img {
+    border-radius: 50%;
+    width: 100%;
+    position: relative;
+    top: -50%;
+}
+
+
+/* Tab-content */
+
+.user-tab-content {
+    margin-top: 30px;
+}
